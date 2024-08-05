@@ -36,7 +36,7 @@ $form-group-margin-bottom:       30px !default;
 // Template Base
 body {
 	font-family: $font-roboto;
-	font-weight: 300;
+	font-weight: 100;
 	font-size: 16px;
 	line-height: 26px;
 	letter-spacing: .02em;
@@ -111,7 +111,7 @@ p {
 	.fh5co-copyright {
 		font-size: 14px;
 		line-height: 20px;
-		font-weight: 400;
+		font-weight: 200;
 		color: $brand-gray;
 		// @media screen and (max-width: $screen-md) {
 			// padding: 20px;

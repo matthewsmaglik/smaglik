@@ -15,7 +15,7 @@
 	};
 
 	var portraitResize = function() {
-		var $portrait = $('#fh5co-portrait'),
+		var $portrait = $('#fh5co-bio'),
 			winHeight = $(window).height();
 
 		if ( $portrait.data('minheight') < winHeight )  {
@@ -23,7 +23,7 @@
 		}
 
 		$(window).resize(function(){
-			var $portrait = $('#fh5co-portrait'),
+			var $portrait = $('#fh5co-bio'),
 				winHeight = $(window).height();
 
 			if ( $portrait.data('minheight') < winHeight )  {

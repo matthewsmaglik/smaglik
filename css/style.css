@@ -4,51 +4,53 @@ body {
   font-size: 16px;
   line-height: 32px;
   letter-spacing: .03em;
-  color: #000;
 }
 
 a {
 	color: #000;
+    border-bottom: 1px solid #ccc;
 	-moz-transition: 0.5s;
 	-o-transition: 0.5s;
 	-webkit-transition: 0.5s;
 	-ms-transition: 0.5s;
 	transition: 0.5s;
 	text-decoration: none;
-	border-bottom: 2px solid #ccc;
 }
+
 a:hover, a:active, a:focus {
 	outline: none;
 	text-decoration: none;
-	color: #86CD6C;
-	border-bottom: 2px solid #86CD6C;
+	color: seagreen;
+    border-bottom: 1px solid seagreen;
 }
 
 p {
-  font-size: 16px;
-  margin-bottom: 1.5em;
+    font-size: 25px;
+    line-height: 40px;
+    font-weight: 100;
+  margin-bottom: 1em;
 }
 
 ::-webkit-selection {
   color: #FFF;
-  background: #86CD6C;
+  background: #000;
 }
 
 ::-moz-selection {
   color: #FFF;
-  background: #86CD6C;
+  background: #000;
 }
 
 ::selection {
   color: #FFF;
-  background: #86CD6C;
+  background: #000;
 }
 
 #fh5co-bio {
-  font-size: 16px;
   line-height: 28px;
   font-weight: 100;
   position: absolute;
+  background-color: white;
   color: #000;
   width: 33%;
   top: 0;
@@ -64,10 +66,14 @@ p {
   transition: 0.2s;
 }
 #fh5co-bio #fh5co-bio-inner {
-  font-family: "Roboto", sans-serif;
   font-weight: 100;
   padding: 40px;
+  max-width: 1000px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 @media screen and (max-width: 992px) {
   #fh5co-bio #fh5co-bio-inner {
     padding: 20px;
@@ -76,7 +82,7 @@ p {
 @media screen and (max-width: 992px) {
   #fh5co-bio {
     font-size: 20px;
-    line-height: 36px;
+    line-height: 28px;
     width: 100%;
     position: relative;
   }
@@ -84,13 +90,14 @@ p {
 #fh5co-bio .fh5co-copyright {
   font-size: 20px;
   line-height: 20px;
-  font-weight: 200;
+  font-weight: 100;
   color: #ccc;
    
 }
 
 #fh5co-portrait {
-  z-index: 2;
+  color: #000;
+  z-index: 1;
   width: 66%;
   position: absolute;
   overflow: hidden;
@@ -100,43 +107,73 @@ p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  -moz-transition: 0.2s;
-  -o-transition: 0.2s;
-  -webkit-transition: 0.2s;
-  -ms-transition: 0.2s;
-  transition: 0.2s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+    
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
 }
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 @media screen and (max-width: 992px) {
   #fh5co-portrait {
-	  background-position: center;
+    background-position: center;
     width: 100%;
     position: relative;
-    height: 700px;
+    height: 600px;
     overflow: inherit;
     left: 0;
     right: 0;
     float: left;
-    width: 100%;
   }
 }
 #fh5co-portrait #fh5co-intro {
   position: absolute;
-font-weight: 900;
-  bottom: 5px;
+  bottom: 30px;
   left: 40px;
-  z-index: 4;
+  z-index: 2;
   color: #fff;
 }
 @media screen and (max-width: 768px) {
   #fh5co-portrait #fh5co-intro {
     left: 20px;
-    bottom: 50px;
+    bottom: 20px;
   }
 }
 #fh5co-portrait #fh5co-intro a {
   color: #fff;
   color: white;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 0px solid rgba(255, 255, 255, 0.2);
 }
 #fh5co-portrait #fh5co-intro a:hover {
   color: white;
@@ -175,6 +212,7 @@ font-weight: 900;
 	left: 0;
 	bottom: 0;
 	right: 0;}
+
 #fh5co-portrait .fh5co-social {
 	position: absolute;
 	bottom: 16px;
@@ -218,24 +256,30 @@ font-weight: 900;
 
 #fh5co-toggle {
   position: absolute;
+  z-index: 4;
   top: 40px;
-  left: 40px;
-  z-index: 6;
+  right: 40px;
 }
+
 #fh5co-toggle a {
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 40px;
+  color: rgb(46, 139, 87, 0.5);
   border-bottom: none !important;
-  font-size: 30px;
-  -moz-transition: 0.3s;
-  -o-transition: 0.3s;
-  -webkit-transition: 0.3s;
-  -ms-transition: 0.3s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -ms-transition: 0.2s;
   transition: 0.3s;
   display: inline-block;
 }
-#fh5co-toggle a:hover, #fh5co-toggle a:active, #fh5co-toggle a:focus {
-  color: white;
+#fh5co-toggle a:hover, #fh5co-toggle a:active {
+    color: seagreen;
 }
+
+#fh5co-toggle a:focus {
+    color: seagreen;
+}
+
 #fh5co-toggle a.fh5co-active {
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
@@ -246,13 +290,12 @@ font-weight: 900;
   #fh5co-toggle {
     top: auto;
     left: auto;
-    bottom: 20px;
+    top: 20px;
     right: 20px;
   }
   #fh5co-toggle a {
-    color: #fff;
     border-bottom: none !important;
-    font-size: 30px;
+    font-size: 40px;
     -moz-transition: 0.3s;
     -o-transition: 0.3s;
     -webkit-transition: 0.3s;
@@ -272,17 +315,17 @@ font-weight: 900;
   }
 }
 
-.fh5co-showaside #fh5co-portrait {
+.fh5co-showaside #fh5co-bio {
   width: 100%;
   z-index: 3;
 }
 @media screen and (max-width: 992px) {
-  .fh5co-showaside #fh5co-portrait {
+  .fh5co-showaside #fh5co-bio {
     position: absolute !important;
   }
 }
 .fh5co-showaside #fh5co-bio {
-  z-index: 0;
+  z-index: 3;
 }
 @media screen and (max-width: 992px) {
   .fh5co-showaside #fh5co-bio {
